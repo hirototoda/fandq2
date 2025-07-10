@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - よくある質問</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        .faq-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #2980b9;
+        }
+
+        .faq-question.active {
+            background: #2980b9;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-answer-content {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .faq-answer-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+
+            .faq-question h3 {
+                font-size: 1em;
+            }
+
+            .faq-answer.active {
+                padding: 15px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>よくある質問</h1>
+            <p>お困りの際は、まずこちらをご確認ください</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: どのようなサービスを提供していますか？</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>私は以下のようなサービスを提供しています：</p>
+                        <ul>
+                            <li>Webサイト制作・デザイン</li>
+                            <li>プログラミング・システム開発</li>
+                            <li>コンサルティング業務</li>
+                            <li>技術サポート・メンテナンス</li>
+                        </ul>
+                        <p>詳細については、お気軽にお問い合わせください。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: 料金体系について教えてください</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>料金は以下の方式で設定しています：</p>
+                        <ul>
+                            <li>時間単価制：1時間あたり5,000円〜</li>
+                            <li>プロジェクト単価制：内容に応じて個別見積もり</li>
+                            <li>月額契約：継続的なサポートの場合</li>
+                        </ul>
+                        <p>初回相談は無料で承っております。プロジェクトの規模や内容によって最適なプランをご提案いたします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: 対応可能な時間はいつですか？</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>基本的な対応時間は以下の通りです：</p>
+                        <ul>
+                            <li>平日：9:00 - 18:00</li>
+                            <li>土日祝：要相談（緊急時は対応可能）</li>
+                            <li>メール・チャット：24時間受付（返信は営業時間内）</li>
+                        </ul>
+                        <p>プロジェクトの納期や緊急度に応じて、柔軟に対応いたします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: どのような技術に対応していますか？</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>以下の技術スタックに対応しています：</p>
+                        <ul>
+                            <li>フロントエンド：HTML/CSS/JavaScript, React, Vue.js</li>
+                            <li>バックエンド：Node.js, Python, PHP</li>
+                            <li>データベース：MySQL, PostgreSQL, MongoDB</li>
+                            <li>インフラ：AWS, Docker, Git</li>
+                        </ul>
+                        <p>その他の技術についても、ご相談いただければ対応可能か検討いたします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: プロジェクトの進め方について教えてください</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>一般的なプロジェクトの流れは以下の通りです：</p>
+                        <ul>
+                            <li>1. 初回ヒアリング（無料相談）</li>
+                            <li>2. 要件定義・見積もり作成</li>
+                            <li>3. 契約・プロジェクト開始</li>
+                            <li>4. 定期的な進捗報告</li>
+                            <li>5. 納品・検収</li>
+                            <li>6. アフターサポート</li>
+                        </ul>
+                        <p>途中で仕様変更が必要な場合も、柔軟に対応いたします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: 支払い方法はどのようなものがありますか？</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>以下の支払い方法に対応しています：</p>
+                        <ul>
+                            <li>銀行振込（前払い・後払い対応）</li>
+                            <li>PayPal</li>
+                            <li>請求書払い（法人のお客様）</li>
+                        </ul>
+                        <p>プロジェクトの規模に応じて、分割払いも可能です。詳細はご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Q: お問い合わせ方法を教えてください</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>以下の方法でお問い合わせいただけます：</p>
+                        <ul>
+                            <li>メール：contact@example.com</li>
+                            <li>電話：090-1234-5678</li>
+                            <li>LINE：@example_id</li>
+                            <li>お問い合わせフォーム（Web サイト）</li>
+                        </ul>
+                        <p>初回相談は無料ですので、お気軽にご連絡ください。通常24時間以内に返信いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const faqAnswer = faqItem.querySelector('.faq-answer');
+                    const isActive = this.classList.contains('active');
+                    
+                    // 全てのアコーディオンを閉じる
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.parentElement.querySelector('.faq-answer').classList.remove('active');
+                    });
+                    
+                    // クリックされたアコーディオンが非アクティブの場合のみ開く
+                    if (!isActive) {
+                        this.classList.add('active');
+                        faqAnswer.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
